@@ -10,6 +10,7 @@ import { Componente1Component } from './componentes/componente1/componente1.comp
 import { Componente2Component } from './componentes/componente2/componente2.component';
 import { Componente3Component } from './componentes/componente3/componente3.component';
 import { FormsModule } from '@angular/forms';
+import { RotacustomComponent } from './componentes/rotacustom/rotacustom.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     RodapeComponent,
     Componente1Component,
     Componente2Component,
-    Componente3Component
+    Componente3Component,
+    RotacustomComponent
   ],
   imports: [
     BrowserModule,
