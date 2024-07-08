@@ -1,3 +1,10 @@
-<p>conteudo works! Mensagem = {{ mensagem }} - {{ valor}}</p>
+Login:
+<input type="text" id="meuTxt" [(ngModel)]="textoForm">
+<br/>
+Senha:
+<input type="password" id="minhaSenha" [(ngModel)]="senha">
+<input type="checkbox" [(ngModel)]="clicado">Clique Aqui<br/>
+<button (click)="enviarDados()">Enviar Dados</button>
 
+<p>conteudo works! Mensagem = {{ mensagem }} - {{ valor}}</p>
 <button (click)="mudarValor()">Mudar Valor</button>
