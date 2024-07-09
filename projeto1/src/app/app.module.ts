@@ -11,7 +11,7 @@ import { Componente2Component } from './componentes/componente2/componente2.comp
 import { Componente3Component } from './componentes/componente3/componente3.component';
 import { FormsModule } from '@angular/forms';
 import { RotacustomComponent } from './componentes/rotacustom/rotacustom.component';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { provideHttpClient } from '@angular/common/http';
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient()
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

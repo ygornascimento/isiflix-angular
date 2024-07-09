@@ -10,19 +10,26 @@ import { Console } from 'console';
 })
 export class Componente2Component implements OnInit{
 
-  public constructor(private service: PostService) {
+  public lista: Post[];
+  public loading: boolean;
 
+  public constructor(private service: PostService) {
+    this.lista = [];
+    this.loading = false;
   }
   
   public ngOnInit(): void {
+    this.loading = true;
     this.service.consumirPosts().subscribe({
       next: (res: Post[]) => {
         console.log("Sucesso!");
-        console.log(res);
+        this.lista = res;
+        this.loading = false;
       },
       error: (err: any) => {
         console.log("ERROR!");
         console.log(err);
+        this.loading = false;
       }
     });
   }
