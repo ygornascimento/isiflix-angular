@@ -12,6 +12,7 @@ import { Componente3Component } from './componentes/componente3/componente3.comp
 import { FormsModule } from '@angular/forms';
 import { RotacustomComponent } from './componentes/rotacustom/rotacustom.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { FilhoComponent } from './componentes/filho/filho.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     Componente1Component,
     Componente2Component,
     Componente3Component,
-    RotacustomComponent
+    RotacustomComponent,
+    FilhoComponent
   ],
   imports: [
     BrowserModule,

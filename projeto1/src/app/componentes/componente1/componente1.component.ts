@@ -7,6 +7,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './componente1.component.css'
 })
 export class Componente1Component implements OnInit {
+
+  public valor: number = 0;
+  public valorRecebido: number = 0;
+
   public constructor(private activatedRoute: ActivatedRoute) {
     let p1: string;
     let p2: string;
@@ -19,5 +23,14 @@ export class Componente1Component implements OnInit {
   }
 
   public ngOnInit(): void {
+  }
+
+  public incrementa(): void {
+    this.valor++;
+  }
+
+  public trataEvento(valorVindoDoFilho: number): void {
+    console.log("Tratando evento recebido pelo filho. " + valorVindoDoFilho);
+    this.valorRecebido = valorVindoDoFilho;
   }
 }

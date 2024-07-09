@@ -1,1 +1,4 @@
 <p>componente1 works!</p>
+<button (click)="incrementa()">Muda Valor</button>
+<p>Valor do Pai = {{valor}}  --  Valor vindo do filho = {{valorRecebido}}</p>
+<app-filho [valorFilho]="valor" (eventoFilho)="trataEvento($event)"></app-filho>
